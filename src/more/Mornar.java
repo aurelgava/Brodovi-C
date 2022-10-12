@@ -9,11 +9,19 @@ public class Mornar {
     public Mornar(String ime, int kvalitet) {
         this.ime = ime;
         this.kvalitet = kvalitet;
+        if (kvalitet >= 100) {
+            kvalitet = 100;
+        }
+        if (kvalitet <= 0) {
+            kvalitet = 0;
+        }
     }
-   /* if (kvalitet >= 100) {
-        kvalitet = 100;
+
+    @Override
+    public String toString() {
+        return "Mornar{" +
+                "ime='" + ime + '\'' +
+                ", kvalitet=" + kvalitet +
+                '}';
     }
-   if (kvalitet <= 0) {
-        kvalitet = 0;
-    } */
 }
