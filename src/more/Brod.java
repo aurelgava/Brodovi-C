@@ -32,6 +32,14 @@ public class Brod {
       return mornari[0];
    }
 
+   public char getVrsta() {
+      return vrsta;
+   }
+
+   public void setVrsta(char vrsta) {
+      this.vrsta = vrsta;
+   }
+
    public Mornar dohvMornar(int i) {
       return mornari[i];
    }
