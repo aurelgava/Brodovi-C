@@ -25,7 +25,9 @@ public class Brod {
          trenutniBroj++;
       }
    }
-
+   public void ukloniMornare(){
+      trenutniBroj=0;
+   }
    public Mornar dohvatiKapetana() {
       return mornari[0];
    }
