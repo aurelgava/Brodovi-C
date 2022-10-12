@@ -24,4 +24,12 @@ public class Mornar {
                 ", kvalitet=" + kvalitet +
                 '}';
     }
+
+    public String getIme() {
+        return ime;
+    }
+
+    public int getKvalitet() {
+        return kvalitet;
+    }
 }
