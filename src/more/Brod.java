@@ -15,7 +15,8 @@ public class Brod {
       trenutniBroj++;
    }
    public void dodajMorn(Mornar a) {
-      if(a.kapacitet>mornari[0]) {
+
+      if(a.getKvalitet() > mornari[0].getKvalitet()) {
          mornari[trenutniBroj+1]=mornari[0];
          mornari[0]=a;
          trenutniBroj++;
@@ -25,11 +26,11 @@ public class Brod {
       }
    }
 
-   public Mornar uhvatiKapetana() {
-      return kapetan;
+   public Mornar dohvatiKapetana() {
+      return mornari[0];
    }
 
-   public Mornar[] dohvMornar(int i) {
+   public Mornar dohvMornar(int i) {
       return mornari[i];
    }
 }
