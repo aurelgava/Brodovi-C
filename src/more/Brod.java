@@ -39,7 +39,15 @@ public class Brod {
    public void setVrsta(char vrsta) {
       this.vrsta = vrsta;
    }
-
+   public int prosecniKvalitet() {
+      int prosek=0,i=0,prosekZbir=0;
+      while(i< mornari.length) {
+         prosekZbir=prosekZbir+mornari[i].getKvalitet();
+         i++;
+      }
+      prosek=prosekZbir/ mornari.length;
+      return prosek;
+   }
    public Mornar dohvMornar(int i) {
       return mornari[i];
    }
