@@ -2,7 +2,7 @@ package more;
 
 public class GusarskiBrod extends Brod{
 
-    private GusarskiBrod(String naziv, int kapacitet, Mornar mornari) {
+    public GusarskiBrod(String naziv, int kapacitet, Mornar mornari) {
         super(naziv, kapacitet, mornari);
     }
     private void napadni(Brod b){
