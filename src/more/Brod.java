@@ -25,12 +25,44 @@ public class Brod {
          trenutniBroj++;
       }
    }
-
+   public void ukloniMornare(){
+      trenutniBroj=0;
+   }
    public Mornar dohvatiKapetana() {
       return mornari[0];
    }
 
+   public char getVrsta() {
+      return vrsta;
+   }
+
+   public void setVrsta(char vrsta) {
+      this.vrsta = vrsta;
+   }
+   public int prosecniKvalitet() {
+      int prosek=0,i=0,prosekZbir=0;
+      while(i< mornari.length) {
+         prosekZbir=prosekZbir+mornari[i].getKvalitet();
+         i++;
+      }
+      prosek=prosekZbir/ mornari.length;
+      return prosek;
+   }
    public Mornar dohvMornar(int i) {
       return mornari[i];
    }
+
+   public int getTrenutniBroj() {
+      return trenutniBroj;
+   }
+   public Mornar najgoriMornar() {
+      Mornar najgori=mornari[0];
+      for(int i=0;i< mornari.length;i++) {
+         if(mornari[i].getKvalitet()<najgori.getKvalitet()) {
+            najgori=mornari[i];
+         }
+      }
+      return najgori;
+   }
+
 }
