@@ -14,7 +14,7 @@ public class KraljevskiBrod extends Brod {
         if (this.prosecniKvalitet() > brod.prosecniKvalitet()) {
             for (int i = 0; i < brod.mornari.length; i++) {
                 if (brod.dohvMornar(i).getKvalitet() > this.najgoriMornar().getKvalitet()) {
-
+                    this.dodajMorn(brod.dohvMornar(i));
                 }
             }
         }
