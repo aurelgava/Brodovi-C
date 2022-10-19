@@ -2,22 +2,22 @@ package more;
 
 public class KraljevskiBrod extends Brod {
 
-    private KraljevskiBrod (String naziv, int kapacitet, Mornar mornari) {
+    public KraljevskiBrod (String naziv, int kapacitet, Mornar mornari) {
         super(naziv, kapacitet, mornari);
+        super.vrsta = 'K';
     }
 
-    private void napadni(Brod brod) {
+    public void napadni(Brod brod) {
         if (brod.vrsta == 'K') {
             System.out.println("Ne mozes napasti kraljevski brod");
         }
-        else {
-            if (super.trenutniBroj>brod.trenutniBroj){
-                if (this.dohvatiKapetana().getKvalitet()>brod.dohvatiKapetana().getKvalitet() && trenutniBroj<kapacitet){
-                    dodajMorn(brod.dohvatiKapetana());
+        if (this.prosecniKvalitet() > brod.prosecniKvalitet()) {
+            for (int i = 0; i < brod.mornari.length; i++) {
+                if (brod.dohvMornar(i).getKvalitet() > this.najgoriMornar().getKvalitet()) {
+
                 }
             }
         }
-
     }
 
 }
