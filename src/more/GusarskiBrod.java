@@ -7,12 +7,16 @@ public class GusarskiBrod extends Brod{
     }
     private void napadni(Brod b){
         if(super.trenutniBroj>b.trenutniBroj){
-            if(this.dohvatiKapetana().getKvalitet()>b.dohvatiKapetana().getKvalitet() && trenutniBroj<kapacitet){
-                dodajMorn(b.dohvatiKapetana());
-            }else {
+                if(this.prosecniKvalitet()>b.prosecniKvalitet()){
+                    if(this.dohvatiKapetana().getKvalitet()>b.najgoriMornar().getKvalitet() && trenutniBroj<kapacitet) {
+                        dodajMorn(b.dohvatiKapetana());
+                }else{
+
+                    }
+                }else {
 
             }
-        }else{
+        }else {
         }
 
     }
