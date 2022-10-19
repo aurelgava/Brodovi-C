@@ -51,4 +51,8 @@ public class Brod {
    public Mornar dohvMornar(int i) {
       return mornari[i];
    }
+
+   public int getTrenutniBroj() {
+      return trenutniBroj;
+   }
 }
