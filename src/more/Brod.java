@@ -55,4 +55,13 @@ public class Brod {
    public int getTrenutniBroj() {
       return trenutniBroj;
    }
+   public Mornar najgoriMornar() {
+      Mornar najgori=mornari[0];
+      for(int i=0;i< mornari.length;i++) {
+         if(mornari[i].getKvalitet()<najgori.getKvalitet()) {
+            najgori=mornari[i];
+         }
+      }
+      return najgori;
+   }
 }
