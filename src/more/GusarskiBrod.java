@@ -5,7 +5,7 @@ public class GusarskiBrod extends Brod{
     public GusarskiBrod(String naziv, int kapacitet, Mornar mornari) {
         super(naziv, kapacitet, mornari);
     }
-    private void napadni(Brod b){
+    public void napadni(Brod b){
         if(super.trenutniBroj>b.trenutniBroj){
                 if(this.prosecniKvalitet()>b.prosecniKvalitet()){
                     if(this.dohvatiKapetana().getKvalitet()>b.najgoriMornar().getKvalitet() && trenutniBroj<kapacitet) {
