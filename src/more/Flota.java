@@ -16,7 +16,7 @@ public class Flota {
     private char vrstaFlote; //K - kraljevska,   G - gusari
 
 //aa
-    Flota(String x){
+    public Flota(String x){
         this.naziv = x;
     }
 
